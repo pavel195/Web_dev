@@ -1,0 +1,9 @@
+'' 2
+hello 2
+world 0
+It 1
+is 0
+a 2
+wonderful 1
+day 0
+today 0
