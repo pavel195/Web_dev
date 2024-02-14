@@ -8,9 +8,19 @@ class Abitu:
     def __init__(self, name, facult):
         self.name = name
         self.facult = facult
-        self.scoreEGE = random.randint(100,301)
+        self.scoreEGE = random.randint(100,300)
+        self.counter = 0
     def display(self):
         print(self.name,self.facult,self.scoreEGE)
+        self.counter += 1
+    def display(self):
+        print(self.name,self.facult,self.scoreEGE)
+        self.counter += 1
+    def __score_ege(self):
+        print(f'{self.name} has {self.scoreEGE}')
+        self.counter += 1
+    def call_score_ege(self):
+        self.__score_ege()
 class Student(Abitu):
     vyzName = ''
     facs = ''
@@ -80,8 +90,10 @@ if __name__ =='__main__':
             facsAbi[facs[i]][k].display()
     print("Поступили:")
     for i in range(0, len(facs)):
-        print(facs[i] + ": \n")
+        print(f'{facs[i]} c количеством мест {vyz1.facs_and_places[facs[i]]}' + ": \n")
         for k in range(0, len(students[facs[i]])):
             print(f'{k+1})',end='')
             students[facs[i]][k].display()
+            # students[facs[i]][k].__score_ege()
+            students[facs[i]][k].call_score_ege()
 
